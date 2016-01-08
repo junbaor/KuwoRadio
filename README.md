@@ -1,7 +1,7 @@
 # KuwoRadio
 酷我原创电台
 
-APP正在研究，先把整理的 [API](https://github.com/junbaor/KuwoRadio/wiki/%E9%85%B7%E6%88%91%E5%8E%9F%E5%88%9B%E7%94%B5%E5%8F%B0API%E5%88%86%E6%9E%90) 发上来。
+ [API](https://github.com/junbaor/KuwoRadio/wiki/%E9%85%B7%E6%88%91%E5%8E%9F%E5%88%9B%E7%94%B5%E5%8F%B0API%E5%88%86%E6%9E%90) 
 
 - - -
 
@@ -98,12 +98,12 @@ APP正在研究，先把整理的 [API](https://github.com/junbaor/KuwoRadio/wik
         * `formats` : 音质种类
 
 ### 2. 获取音频地址
-* URL: `http://antiserver.kuwo.cn/anti.s?type=convert_url&rid=MUSIC_6559980&format=wma&response=url`
+* URL: `http://antiserver.kuwo.cn/anti.s?type=convert_url&rid=MUSIC_6559980&format=mp3&response=url`
 * 参数:
     * `rid` : 上一步中的`musicrid`，但要在前面加上`music_`,注意有下划线，对大小写不敏感
     * `format` : 音频音频格式,目前已知候选值：`mp3`,`wma`,`aac`
 * 响应实例:
 
-         http://rg01.sycdn.kuwo.cn/4c68c9faa19f7eabcda06871db47fca7/5602ba83/resource/m1/40/63/1915016500.wma
+         http://win.web.rg01.sycdn.kuwo.cn/a93365e4105b35d9f9a4eb7bfedf48e5/568f0add/resource/n2/16/83/2290975134.mp3
 
 
