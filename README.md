@@ -1,10 +1,3 @@
-# KuwoRadio
-酷我原创电台
-
- [API](https://github.com/junbaor/KuwoRadio/wiki/%E9%85%B7%E6%88%91%E5%8E%9F%E5%88%9B%E7%94%B5%E5%8F%B0API%E5%88%86%E6%9E%90) 
-
-- - -
-
 # 声明
 
 以下所有 API 均由 __北京酷我科技有限公司__
@@ -19,12 +12,12 @@
 # API 分析
 
 ### 1. 电台节目列表
-* URL: `http://album.kuwo.cn/album/servlet/commkdtpage`  
+* URL: `http://album.kuwo.cn/album/servlet/commkdtpage?flag=2`  
 * 参数:
     * `flag` : 含义未知，不可省略,且只能等于2
     * `listid` : 电台栏目ID，不可省略,具体栏目对应的ID会在下面列出
-    * `pn` : 页码，可为空，缺省值 `0`
-    * `rn` : 分页条数，可为空，缺省值 `20`
+    * `pn` : 页码,可为空,缺省值 `0`
+    * `rn` : 分页条数,可为空,缺省值 `20`
 * 栏目ID:
 
          1. 吐小槽扒新闻
@@ -46,12 +39,13 @@
         17. 萱草私房歌
         18. 每日正能量
         19. 历史那点事
-        20. 空
-        21. 空
+        20. 放肆音乐
+        21. 微时光
         22. 小曹胡咧咧
         23. 情感热线
         24. 晚安蜜语
         25. 小明和小红的日常生活
+        26. 爆笑录音室
 
 * 响应实例:
 
@@ -87,7 +81,7 @@
 		}
 
 * 分析:
-    * `ret` : 状态码，成功时为`OK`失败是为`end gt total`
+    * `ret` : 状态码，成功时为`OK`失败时为`end gt total`
     * `total` : 栏目数据总数
     * `musiclist` : 音乐数组
         * `yr` : 节目的日期
@@ -98,12 +92,12 @@
         * `formats` : 音质种类
 
 ### 2. 获取音频地址
-* URL: `http://antiserver.kuwo.cn/anti.s?type=convert_url&rid=MUSIC_6559980&format=mp3&response=url`
+* URL: `http://antiserver.kuwo.cn/anti.s?type=convert_url&rid=MUSIC_6559980&format=wma&response=url`
 * 参数:
-    * `rid` : 上一步中的`musicrid`，但要在前面加上`music_`,注意有下划线，对大小写不敏感
+    * `rid` : 上一步中的`musicrid`,但要在前面加上`music_`,注意有下划线,对大小写不敏感
     * `format` : 音频音频格式,目前已知候选值：`mp3`,`wma`,`aac`
 * 响应实例:
 
-         http://win.web.rg01.sycdn.kuwo.cn/a93365e4105b35d9f9a4eb7bfedf48e5/568f0add/resource/n2/16/83/2290975134.mp3
+         http://rg01.sycdn.kuwo.cn/4c68c9faa19f7eabcda06871db47fca7/5602ba83/resource/m1/40/63/1915016500.wma
 
 
