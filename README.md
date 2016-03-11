@@ -94,7 +94,7 @@
         * `formats` : 音质种类
 
 ### 2. 获取音频地址
-* URL: `http://antiserver.kuwo.cn/anti.s?type=convert_url&rid=MUSIC_6559980&format=wma&response=url`
+* URL: `http://antiserver.kuwo.cn/anti.s?type=convert_url&rid=MUSIC_6559980&format=mp3&response=url`
 * 参数:
     * `rid` : 上一步中的`musicrid`,但要在前面加上`music_`,注意有下划线,对大小写不敏感
     * `format` : 音频音频格式,目前已知候选值：`mp3`,`wma`,`aac`
