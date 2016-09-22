@@ -125,9 +125,12 @@ public class KuwoFragment extends Fragment {
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                 if (statusCode == HttpStatus.SC_OK) {
                     Gson gson = new Gson();
-                    Kuwo kuwo = gson.fromJson(new String(responseBody), Kuwo.class);
+                    String res = new String(responseBody);
+                    Log.d("api响应", res);
+                    Kuwo kuwo = gson.fromJson(res, Kuwo.class);
                     listDate.clear();
                     for (Music music : kuwo.getMusiclist()) {
+                        if (music == null) continue;
                         String name = music.getName();
                         if (name.indexOf("(") > -1) {
                             name = name.substring(0, name.indexOf("("));
