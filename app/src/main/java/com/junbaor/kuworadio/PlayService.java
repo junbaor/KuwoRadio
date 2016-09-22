@@ -43,7 +43,9 @@ public class PlayService extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
         Log.d("info：", "MyService.onStartCommand...");
         String URI = intent.getStringExtra("URI");
-        if (URI == null || URI.isEmpty() || URI.equals(currentPlay)) {
+        if (URI == null ||
+                URI.isEmpty() ||
+                URI.equals(currentPlay)) {
             if (mediaPlayer.isPlaying()) {
                 mediaPlayer.pause();
             } else {
