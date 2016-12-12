@@ -1,4 +1,6 @@
 #KuwoRadio
+# 截图
+![图片描述](http://img.junbaor.com/2016121228F9AA56FD3AD0C954B8A624144C8F91.png)
 
 # 声明
 
