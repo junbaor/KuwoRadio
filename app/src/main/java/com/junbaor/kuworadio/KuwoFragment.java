@@ -1,5 +1,6 @@
 package com.junbaor.kuworadio;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -34,6 +35,7 @@ import cz.msebera.android.httpclient.HttpStatus;
 /**
  * Created by Administrator on 2016/3/11.
  */
+@SuppressLint("ValidFragment")
 public class KuwoFragment extends Fragment {
     private List<Map<String, Object>> listDate = new ArrayList<>();
     private String dataUrl;
@@ -45,6 +47,9 @@ public class KuwoFragment extends Fragment {
     private boolean isInit = false;
     private View view;
 
+    public KuwoFragment() {
+        Log.d("DUBUG", "KuwoFragment 无参构造方法执行...");
+    }
 
     public KuwoFragment(Context context, String id) {
         Log.d("DUBUG", "KuwoFragment" + id + " 构造方法执行...");
