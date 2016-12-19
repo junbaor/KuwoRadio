@@ -20,32 +20,37 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="80dp"
-        android:layout_marginTop="20dp"
-        android:text="网络缓冲较慢,稍等..."
-        android:textSize="30sp" />
 
     <TextView
         android:id="@+id/txt_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="30dp"
         android:text=""
+        android:textSize="26sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="请耐心等待网络缓冲"
         android:textSize="15sp" />
 
     <Button
         android:id="@+id/btn_playNetAudio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="播放/暂停" />
+        android:layout_margin="50dp"
+        android:text="播放/暂停"
+        android:textSize="20dp" />
 
     <Button
         android:id="@+id/btn_stopNetAudio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="停止" />
+        android:layout_marginTop="10dp"
+        android:text="停止"
+        android:textSize="20dp" />
 
 
 </LinearLayout>

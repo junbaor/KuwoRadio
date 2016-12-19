@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         pager = (ViewPager) findViewById(R.id.view_pager);
         ArrayList<Fragment> fragments = new ArrayList<>();
 
-        fragments.add(new KuwoFragment(MainActivity.this, "1"));
+        /*fragments.add(new KuwoFragment(MainActivity.this, "1"));*/
         fragments.add(new KuwoFragment(MainActivity.this, "2"));
         fragments.add(new KuwoFragment(MainActivity.this, "3"));
         fragments.add(new KuwoFragment(MainActivity.this, "4"));
@@ -49,6 +49,9 @@ public class MainActivity extends AppCompatActivity {
         fragments.add(new KuwoFragment(MainActivity.this, "6"));
         fragments.add(new KuwoFragment(MainActivity.this, "15"));
         fragments.add(new KuwoFragment(MainActivity.this, "22"));
+        fragments.add(new KuwoFragment(MainActivity.this, "17"));
+        fragments.add(new KuwoFragment(MainActivity.this, "18"));
+        fragments.add(new KuwoFragment(MainActivity.this, "19"));
 
         MyPagerAdapter adapter = new MyPagerAdapter(getSupportFragmentManager(), fragments);
         pager.setAdapter(adapter);
@@ -56,14 +59,17 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.setupWithViewPager(pager);
 
         //设置tab标题
-        tabLayout.getTabAt(0).setText("吐小槽扒新闻");
-        tabLayout.getTabAt(1).setText("莫萱日记");
-        tabLayout.getTabAt(2).setText("爆笑糗事段子");
-        tabLayout.getTabAt(3).setText("柜子开了");
-        tabLayout.getTabAt(4).setText("酷我音乐调频");
-        tabLayout.getTabAt(5).setText("一路向北");
-        tabLayout.getTabAt(6).setText("请给我一首歌的时间");
-        tabLayout.getTabAt(7).setText("小曹胡咧咧");
+        /*tabLayout.getTabAt(0).setText("吐小槽扒新闻");*/
+        tabLayout.getTabAt(0).setText("莫萱日记");
+        tabLayout.getTabAt(1).setText("爆笑糗事段子");
+        tabLayout.getTabAt(2).setText("柜子开了");
+        tabLayout.getTabAt(3).setText("酷我音乐调频");
+        tabLayout.getTabAt(4).setText("一路向北");
+        tabLayout.getTabAt(5).setText("请给我一首歌的时间");
+        tabLayout.getTabAt(6).setText("小曹胡咧咧");
+        tabLayout.getTabAt(7).setText("萱草私房歌");
+        tabLayout.getTabAt(8).setText("每日正能量");
+        tabLayout.getTabAt(9).setText("历史那点事");
 
     }
 

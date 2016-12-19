@@ -55,7 +55,7 @@ public class KuwoFragment extends Fragment {
         Log.d("DUBUG", "KuwoFragment" + id + " 构造方法执行...");
         this.id = id;
         this.context = context;
-        dataUrl = "http://album.kuwo.cn/album/servlet/commkdtpage?flag=2&listid=" + id;
+        dataUrl = "http://album.kuwo.cn/album/servlet/commkdtpage?flag=2&rn=50&listid=" + id;
     }
 
     @Override
